@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -5,26 +7,125 @@
 }
 body {
   width: 100%;
+  font-family: "Lato", sans-serif;
   overflow-x: hidden;
 }
 .text-logo {
   margin: 10px 0;
   padding-left: 10px;
 }
+.text-logo .blue {
+  color: deepskyblue;
+}
 ul {
   display: flex;
   flex-direction: column;
-  background: cornflowerblue;
+  background: powderblue;
 }
 ul li {
   list-style: none;
   margin: 10px;
   padding: 10px;
-  background: darkorange;
+  background: darkseagreen;
   border-radius: 10px;
   text-align: center;
 }
 ul li a {
   text-decoration: none;
   color: aliceblue;
+}
+
+/*-------- Gallery Section --------*/
+.first-class h3 {
+  text-align: center;
+  margin: 50px 0 20px 0;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0)
+  );
+}
+.photos img {
+  width: 100%;
+  margin: 0 auto;
+}
+.photos {
+  margin: 20px;
+}
+
+/*-------- Footer Section --------*/
+.footer-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid;
+  left: 0;
+  bottom: 0;
+  padding: 29px;
+  background-color: powderblue;
+}
+
+@media screen and (min-width: 576px) {
+  .photo-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .photos {
+    width: 75%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1770px;
+    margin: 0 auto;
+  }
+  .text-logo h2 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  ul {
+    background: none;
+    flex-direction: row;
+  }
+  ul li {
+    background: none;
+  }
+  ul li a {
+    color: black;
+    padding: 10px;
+    border-bottom-style: inset;
+    border-bottom-color: gainsboro;
+  }
+  ul li a:hover {
+    background-color: dodgerblue;
+  }
+  .first-class h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  .photo-container {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 100px;
+  }
+  .footer-title h5 {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  .footer-title p {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
 }
