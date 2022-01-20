@@ -68,9 +68,16 @@ hr {
   left: 0;
   bottom: 0;
   padding: 29px;
-  background-color: powderblue;
+  background-color: #1b1f24;
+}
+.footer-title h5 {
+  color: #f1f1f1;
+}
+.footer-title p {
+  color: #f1f1f1;
 }
 
+/*---------- Media Queries ---------- */
 @media screen and (min-width: 576px) {
   .photo-container {
     display: grid;
@@ -81,6 +88,31 @@ hr {
     width: 75%;
     margin: 0 auto;
     padding: 20px 0;
+  }
+}
+
+@media screen and (min-width: 662px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  ul {
+    background: none;
+    flex-direction: row;
+  }
+  ul li {
+    background: none;
+  }
+  ul li a {
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px;
+    border-bottom-style: inset;
+    border-bottom-color: gainsboro;
   }
 }
 
